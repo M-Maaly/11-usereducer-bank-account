@@ -34,6 +34,24 @@ We use `useReducer` to handle the following state transitions:
 
 All actions except for `active` are only available if the account is **active**.
 
+## 📁 Folder Structure
+
+```bash
+src/
+├── App.js         # Main React component
+├── index.js       # Entry point
+├── styles.css     # Optional: custom styling
+```
+
+## 🧪 Example Usage
+
+- Open an account → You start with 5000 EGP
+- Deposit 1000 → Your balance becomes 6000
+- Request a loan of 10,000 → Balance becomes 16,000
+- Pay the loan → Balance becomes 6000
+- Withdraw 1000 → Balance becomes 5000
+- Try to close the account → Not allowed until loan is 0 and balance is 0
+
 ## 🖥️ Running the Project
 
 ### 1. Clone the repository
@@ -41,9 +59,16 @@ All actions except for `active` are only available if the account is **active**.
 ```bash
 git clone https://github.com/your-username/useReducer-bank-app.git
 cd useReducer-bank-app
+```
+### 2. Install dependencies
 
-## 📁 Folder Structure
-src/
-├── App.js         # Main React component
-├── index.js       # Entry point
-├── styles.css     # Optional: custom styling
+```bash
+npm install
+```
+
+3. Start the development server
+
+```bash
+npm start
+```
+
