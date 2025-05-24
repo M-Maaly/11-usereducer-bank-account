@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/11-usereducer-bank-account/static/css/main.f1a0e412.css",
+    "main.js": "/11-usereducer-bank-account/static/js/main.804f471b.js",
+    "index.html": "/11-usereducer-bank-account/index.html",
+    "main.f1a0e412.css.map": "/11-usereducer-bank-account/static/css/main.f1a0e412.css.map",
+    "main.804f471b.js.map": "/11-usereducer-bank-account/static/js/main.804f471b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1a0e412.css",
+    "static/js/main.804f471b.js"
+  ]
+}
