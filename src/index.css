@@ -1,0 +1,10 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.popup {
+  margin-top: 5px;
+  display: block;
+  font-size: 10px;
+  color: red;
+}
