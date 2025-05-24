@@ -36,7 +36,6 @@ function reducer(state, action) {
         ...state,
         isActive: true,
         balance: primaryBalance,
-        
       };
 
     case "notActive":
@@ -48,6 +47,7 @@ function reducer(state, action) {
         deposit:
           action.payload >= 100 && action.payload <= 5000 ? action.payload : 0,
       };
+      
     case "loan":
       return {
         ...state,
@@ -69,11 +69,13 @@ function reducer(state, action) {
             ? action.payload
             : 0,
       };
+      
     case "operationDeposit":
       return {
         ...state,
         balance: state.balance + state.deposit,
       };
+      
     case "operationwithdraw":
       return {
         ...state,
@@ -82,6 +84,7 @@ function reducer(state, action) {
             ? state.balance - state.withdraw
             : (state.withdraw = 0),
       };
+      
     case "operationLoan":
       return {
         ...state,
@@ -89,6 +92,7 @@ function reducer(state, action) {
           state.hasLoan === false ? state.balance + state.loan : state.balance,
         hasLoan: true,
       };
+      
     case "operationPayloan":
       return {
         ...state,
@@ -104,8 +108,9 @@ function reducer(state, action) {
         deposit: null,
         withdraw: null,
       };
+      
     default:
-      throw new Error("Error");
+      throw new Error("Unknowen");
   }
 }
 
@@ -117,7 +122,6 @@ export default function App() {
       <h1>useReducer Bank Account</h1>
       <p>Balance: {balance}</p>
       <p>Loan: {hasLoan ? loan : 0}</p>
-
       <p>
         <button onClick={() => dipatch({ type: "active" })} disabled={isActive}>
           Open account
@@ -197,7 +201,6 @@ export default function App() {
         >
           Pay loan
         </button>
-        
       </p>
       <p>
         <button onClick={() => dipatch({ type: "close" })} disabled={!isActive}>
