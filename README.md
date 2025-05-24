@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# 🏦 useReducer Bank Account App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React application that simulates a basic **bank account system** using the `useReducer` hook to manage complex state logic.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- ✅ Open an account with an initial balance of 5000 EGP
+- 💰 Deposit between 100 and 5000
+- 💸 Withdraw between 50 and 5000 (as long as you have enough balance)
+- 🏦 Request a loan (one-time only) between 5000 and 50,000
+- 💳 Pay back the loan (even if it leads to a negative balance)
+- ❌ Close the account (only if loan = 0 and balance = 0)
 
-### `npm start`
+## 🧠 Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- JavaScript
+- useReducer Hook
+- HTML/CSS (basic styling)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ⚙️ State Management
 
-### `npm test`
+We use `useReducer` to handle the following state transitions:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `active`: Open account
+- `deposit`: Set deposit amount
+- `operationDeposit`: Apply deposit to balance
+- `withdraw`: Set withdraw amount
+- `operationwithdraw`: Deduct withdraw from balance
+- `loan`: Set loan amount
+- `operationLoan`: Apply loan to balance
+- `operationPayloan`: Pay off the loan
+- `close`: Close the account
 
-### `npm run build`
+All actions except for `active` are only available if the account is **active**.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🖥️ Running the Project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Clone the repository
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/your-username/useReducer-bank-app.git
+cd useReducer-bank-app
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📁 Folder Structure
+src/
+├── App.js         # Main React component
+├── index.js       # Entry point
+├── styles.css     # Optional: custom styling
